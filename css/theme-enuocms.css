@@ -1,5 +1,5 @@
 /*
-	AnythingSlider v1.8+ LESS Construction theme
+	AnythingSlider v1.8+ LESS Metallic theme
 	By Rob Garrison
 */
 /*****************************
@@ -16,19 +16,25 @@ SET DEFAULT DIMENSIONS HERE
 }
 /* slider borders */
 /* current navigation tab styling - uses same navigation background image */
+/* two-tone dark grey */
+/* two-tone light grey */
 /* non-current navigation styling */
 .navigation-tab-styling {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   margin: 3px;
   padding: 0;
 }
+.navigation-background {
+  /* two-tone blue   */
+  background: #ccc;
+}
 /* start-stop button background color */
+/* start-stop button text */
 /* navigation arrows */
-/* image height = 300px; set anywhere from 1-300 */
 /* distance the arrow protrudes horizontally outside of the AnythingSlider wrapper */
 /* distance the navigation controls (tabs & start-stop button) protrudes below the wrapper */
-.anythingSlider-construction {
+.anythingSlider-enuocms {
   /*
 	=================================
 	Default state (no keyboard focus)
@@ -36,7 +42,7 @@ SET DEFAULT DIMENSIONS HERE
 	*/
   /* Overall Wrapper */
   margin: 0 auto;
-  padding: 0 45px 0 45px;
+  padding: 0 0 0 0;
   /* slider window - top & bottom borders, default state */
   /* Navigation buttons + start/stop button, default state */
   /*
@@ -52,169 +58,196 @@ SET DEFAULT DIMENSIONS HERE
   /* forward arrow */
   /* Navigation Links */
 }
-.anythingSlider-construction .anythingWindow {
-  border-top: 3px solid #333;
-  border-bottom: 3px solid #333;
+.anythingSlider-enuocms .anythingWindow {
+  border-top: 0px solid #333;
+  border-bottom: 0px solid #333;
 }
-.anythingSlider-construction .anythingControls a {
-  background: transparent url(../images/construction.gif) -52px top no-repeat;
+.anythingSlider-enuocms .anythingControls a {
+  /* two-tone blue   */
+  background: #ccc;
+  /* top shadow */
+  background-color: transparent;
   color: #fff;
+  border: #ccc 1px solid;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
   /* Navigation current button, default state */
   /* start-stop button, stopped, default state */
 }
-.anythingSlider-construction .anythingControls a.cur,
-.anythingSlider-construction .anythingControls a:hover {
-  background-position: -52px -18px;
+.anythingSlider-enuocms .anythingControls a.cur,
+.anythingSlider-enuocms .anythingControls a:hover {
+  background-color: #888;
+  background-position: -70px -137px;
   color: #000;
 }
-.anythingSlider-construction .anythingControls a.start-stop {
-  background-position: -52px -35px;
+.anythingSlider-enuocms .anythingControls a.start-stop {
+  background: #040;
+  color: #ddd;
+  /* top shadow */
+  -moz-box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.5);
   /* start-stop button, playing, default state */
   /* start-stop button, default hovered text color (when visible) */
   /* hide nav/start-stop background image shadow on hover - makes the button appear to come forward */
 }
-.anythingSlider-construction .anythingControls a.start-stop.playing {
-  background-position: -52px -52px;
+.anythingSlider-enuocms .anythingControls a.start-stop.playing {
+  background-color: #800;
 }
-.anythingSlider-construction .anythingControls a.start-stop:hover,
-.anythingSlider-construction .anythingControls a.start-stop.hover,
-.anythingSlider-construction .anythingControls a.start-stop .anythingControls ul a:hover {
-  background-position: -52px -18px;
+.anythingSlider-enuocms .anythingControls a.start-stop:hover,
+.anythingSlider-enuocms .anythingControls a.start-stop.hover,
+.anythingSlider-enuocms .anythingControls a.start-stop .anythingControls ul a:hover {
+  color: #fff;
+  /* top shadow */
+  -moz-box-shadow: inset 0 0 0 #000;
+  -webkit-box-shadow: inset 0 0 0 #000;
+  box-shadow: inset 0 0 0 #000;
 }
-.anythingSlider-construction.activeSlider {
+.anythingSlider-enuocms.activeSlider {
   /* slider window - top & bottom borders, active state */
+  /* Navigation buttons, active state */
+  /* start-stop button, active slider hovered text color (when visible) */
 }
-.anythingSlider-construction.activeSlider .anythingWindow {
-  border-color: #d0aa0d;
+.anythingSlider-enuocms.activeSlider .anythingWindow {
+  border-color: #0355a3;
 }
-.anythingSlider-construction .arrow {
+.anythingSlider-enuocms.activeSlider .anythingControls a {
+  /* background image = top shadow */
+  background-color: transparent;
+  /* Navigation current button, active state */
+  /* start-stop button, stopped, active state */
+}
+.anythingSlider-enuocms.activeSlider .anythingControls a.cur,
+.anythingSlider-enuocms.activeSlider .anythingControls a:hover {
+  background-color: #ccc;
+  background-position: -76px -57px;
+}
+.anythingSlider-enuocms.activeSlider .anythingControls a.start-stop {
+  background: #080;
+  color: #fff;
+  /* start-stop button, playing, active state */
+}
+.anythingSlider-enuocms.activeSlider .anythingControls a.start-stop.playing {
+  color: #fff;
+  background: #d00;
+}
+.anythingSlider-enuocms.activeSlider .start-stop:hover,
+.anythingSlider-enuocms.activeSlider .start-stop.hover {
+  color: #fff;
+}
+.anythingSlider-enuocms .arrow {
   top: 50%;
   position: absolute;
   display: block;
+  z-index: 100;
 }
-.anythingSlider-construction .arrow a {
+.anythingSlider-enuocms .arrow a {
   display: block;
-  width: 45px;
-  height: 200px;
-  margin: -100px 0 0 0;
+  width: 74px;
+  height: 59px;
+  margin: -29.5px 0 0 0;
   /* half height of image */
   text-align: center;
   outline: 0;
-  background: url(../images/construction.gif) no-repeat;
+  background: url(../images/arrows-enuocms.png) no-repeat;
 }
-.anythingSlider-construction .back {
+.anythingSlider-enuocms .back {
   left: 0;
 }
-.anythingSlider-construction .back a {
-  background-position: left center;
-  border-radius: 5px 0 0 5px;
-  -moz-border-radius: 5px 0 0 5px;
-  -webkit-border-radius: 5px 0 0 5px;
+.anythingSlider-enuocms .back a {
+  background-position: left bottom;
 }
-.anythingSlider-construction .back a:hover,
-.anythingSlider-construction .back a.hover {
-  background-position: -5px center;
+.anythingSlider-enuocms .back a:hover,
+.anythingSlider-enuocms .back a.hover {
+  background-position: left top;
 }
-.anythingSlider-construction .forward {
+.anythingSlider-enuocms .forward {
   right: 0;
 }
-.anythingSlider-construction .forward a {
-  background-position: right center;
-  border-radius: 0 5px 5px 0;
-  -moz-border-radius: 0 5px 5px 0;
-  -webkit-border-radius: 0 5px 5px 0;
+.anythingSlider-enuocms .forward a {
+  background-position: right bottom;
 }
-.anythingSlider-construction .forward a:hover,
-.anythingSlider-construction .forward a.hover {
-  background-position: -67px center;
+.anythingSlider-enuocms .forward a:hover,
+.anythingSlider-enuocms .forward a.hover {
+  background-position: right top;
 }
-.anythingSlider-construction .anythingControls {
-  height: 22.5px;
+.anythingSlider-enuocms .anythingControls {
+  height: 15px;
   /* limit height, needed for IE9 of all things */
   outline: 0;
   display: none;
   float: right;
   position: absolute;
-  bottom: 5px;
-  right: 20px;
-  margin: 0 45px;
+  bottom: 18px;
+  right: -80px;
+  margin: 0 111px;
   /* needed for IE */
   z-index: 100;
   opacity: 0.90;
   filter: alpha(opacity=90);
   /* navigationSize window */
-  /* navigationSize arrows */
+  /* navigationSize nav arrow positioning */
   /* Autoplay Start/Stop button */
 }
-.anythingSlider-construction .anythingControls ul {
+.anythingSlider-enuocms .anythingControls ul {
   margin: 0;
   padding: 0;
   float: left;
 }
-.anythingSlider-construction .anythingControls ul li {
+.anythingSlider-enuocms .anythingControls ul li {
   list-style: none;
   float: left;
   margin: 0;
   padding: 0;
 }
-.anythingSlider-construction .anythingControls ul a {
+.anythingSlider-enuocms .anythingControls ul a {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   margin: 3px;
   padding: 0;
   text-decoration: none;
   text-align: center;
   outline: 0;
 }
-.anythingSlider-construction .anythingControls span {
+.anythingSlider-enuocms .anythingControls span {
   display: block;
   visibility: hidden;
-  /* needed for IE8, instead of text-indent: -9999px */
 }
-.anythingSlider-construction .anythingControls .anythingNavWindow {
+.anythingSlider-enuocms .anythingControls .anythingNavWindow {
   overflow: hidden;
   float: left;
 }
-.anythingSlider-construction .anythingControls li.next a,
-.anythingSlider-construction .anythingControls li.prev a {
-  width: 14px;
-  height: 14px;
-  margin: 4px;
+.anythingSlider-enuocms .anythingControls li.prev a span,
+.anythingSlider-enuocms .anythingControls li.next a span {
+  visibility: visible;
+  position: relative;
+  top: -6px;
+  /* bring navigationSize text arrows into view */
+  color: #fff;
 }
-.anythingSlider-construction .anythingControls li.next a {
-  background-position: -92px -143px;
-}
-.anythingSlider-construction .anythingControls li.next a:hover {
-  background-position: -90px -143px;
-}
-.anythingSlider-construction .anythingControls li.prev a {
-  background-position: -11px -143px;
-}
-.anythingSlider-construction .anythingControls li.prev a:hover {
-  background-position: -13px -143px;
-}
-.anythingSlider-construction .anythingControls .start-stop {
+.anythingSlider-enuocms .anythingControls .start-stop {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   margin: 3px;
   padding: 0;
+  text-align: center;
   text-decoration: none;
-  float: right;
   z-index: 100;
   outline: 0;
 }
 /***********************
 IE8 AND OLDER STYLING
 ***********************/
-.as-oldie .anythingSlider-construction {
+.as-oldie .anythingSlider-metallic {
   /* Navigation Arrows */
 }
-.as-oldie .anythingSlider-construction .arrow {
-  top: 14%;
+.as-oldie .anythingSlider-metallic .arrow {
+  top: 40%;
 }
-.as-oldie .anythingSlider-construction .arrow a {
+.as-oldie .anythingSlider-metallic .arrow a {
   margin: 0;
 }
 /***********************
@@ -255,7 +288,7 @@ COMMON SLIDER STYLING
   margin: 0;
   padding: 0;
 }
-.anythingSlider .arrow span {
+.anythingSlider .arrow a span {
   display: block;
   visibility: hidden;
 }

@@ -1,0 +1,20 @@
+{
+    "name": "anythingslider",
+    "description": "A very robust jQuery-based slider plugin. Need to link to a specific slide? No problem. Like a choice of themes? Got it. Need callbacks for when specific slider actions happen? Sure. Need custom tab names? You got it. Need more than one slider per page? Easy.",
+    "main": [
+        "./css/theme-enuocms.css",
+        "./js/jquery.anythingslider.js"
+    ],
+    "authors": [
+        "zxp <zxp@1mdata.com>"
+    ],
+    "license": "ISC",
+    "homepage": "https://github.com/zhanxp/AnythingSlider",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}
